@@ -102,26 +102,26 @@ const manager = new Manager("Alice",50000,"Engineering");
 
 
 
-const  validateAgeAsync = async (age: number): Promise<string> => {
+// const  validateAgeAsync = async (age: number): Promise<string> => {
     
-    if (age < 18) {
-        return Promise.reject("Access Denied: Must be 18 or older");
-    }
-    if (age >= 18) {
-        setTimeout(() => Promise.resolve("Access granted") , 1000);
-    }
-}
+//     if (age < 18) {
+//         return Promise.reject("Access Denied: Must be 18 or older");
+//     }
+//     if (age >= 18) {
+//         setTimeout(() => Promise.resolve("Access granted") , 1000);
+//     }
+// }
 
 
 
-const validateAgeAsync = async (age: number): Promise<string> => {
-  if (age < 18) {
-    throw new Error("Access Denied: Must be 18 or older");
-  }
-  return new Promise<string>((resolve) => {
-    setTimeout(() => resolve("Access Granted"), 1000);
-  });
-};
+// const validateAgeAsync = async (age: number): Promise<string> => {
+//   if (age < 18) {
+//     throw new Error("Access Denied: Must be 18 or older");
+//   }
+//   return new Promise<string>((resolve) => {
+//     setTimeout(() => resolve("Access Granted"), 1000);
+//   });
+// };
 
 
 

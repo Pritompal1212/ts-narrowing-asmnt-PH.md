@@ -8,9 +8,6 @@ const multiplyValue = (value: number, multiplier?: number) => {
   }
 }
 
-console.log(multiplyValue(10));
-console.log(multiplyValue(10, 5));
-console.log(multiplyValue(7, 0));
 
 
 const processInput = (inputNumber:string|number|boolean) =>{
@@ -28,18 +25,14 @@ const processInput = (inputNumber:string|number|boolean) =>{
         }
     }
 }
-console.log(processInput("  TypeScript  "));
-console.log(processInput(7));
-console.log(processInput(true));
-console.log(processInput(false));
+
 
 
 const formatCoordinate = (coordinate: [number, number,string]) => {
     const [latitude, longitude, direction] = coordinate;
     return ` Location:   ${direction} , (${latitude} , ${longitude}) `;
 }
-console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
-console.log(formatCoordinate([22.35, 91.78, "Chittagong"]));
+
 
 
 
@@ -47,8 +40,7 @@ const concatenateArrays = <t>(t1: t[], t2: t[], t3: t[] = []): t[] => {
     return [...t1, ...t2, ...t3];
 }
 
-console.log(concatenateArrays([1, 2], [3, 4],[5,6]));
-console.log(concatenateArrays(["a", "b"], ["c", "d"]));
+
 
 
 
@@ -69,7 +61,7 @@ const courses = [
   { title: "Next.js Pro", students: 85, isPublished: true }
 ];
 
-console.log(getPopularCourses(courses, 20));
+
 
 
 
@@ -81,8 +73,7 @@ const users = [
     { id: 2, name: "Sadia", role: "Editor" },
     { id: 3, name: "Tariq", role: "Subscriber" }
 ]
-console.log(pluckValues(users, "name"));
-console.log(pluckValues(users, "id"));
+
 
 
 class Employee {
@@ -106,8 +97,7 @@ class Manager extends Employee {
     }
 }
 const manager = new Manager("Alice",50000,"Engineering");
-console.log(manager.getDetails());
-console.log(manager.getRoleInfo());
+
 
 
 
@@ -121,7 +111,7 @@ const  validateAgeAsync = async (age: number): Promise<string> => {
         setTimeout(() => Promise.resolve("Access granted") , 1000);
     }
 }
-console.log( validateAgeAsync(10));
+
 
 
 const validateAgeAsync = async (age: number): Promise<string> => {
